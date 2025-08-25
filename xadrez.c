@@ -4,6 +4,47 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+//Recursividade Bispo, Torre e Rainha desafio mestre
+void movimentoBispo(int casas){
+    if (casas > 0)
+    {
+        printf("Cima,direita!\n");
+        movimentoBispo(casas - 1);
+    }
+    
+}
+void movimentoTorre(int casas){
+    if (casas > 0)
+    {
+        printf("Direita!\n");
+        movimentoTorre(casas - 1);
+    }
+    
+}
+void movimentoRainha(int casas){
+    if (casas > 0)
+    {
+        printf("Esquerda!\n");
+        movimentoRainha(casas - 1);
+    }
+    
+}
+
+//Recursividade do cavalo
+void movimenntoCavalo(int casas){
+    while (movimenntoCavalo)
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            printf("Cima!\n");
+        }
+        printf("Direita!\n");
+        break; 
+    }
+}
+  
+
+
 int main() {
 
     printf("Bem vindo ao desafio de xadrez!\n");
@@ -77,9 +118,27 @@ int main() {
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
 
+    //Imprimindo movimento do bispo
+    printf("\nBispo se movimentou para:\n");
+    movimentoBispo(5);
     
+    
+    //Imprimindo movimento da torre
+    printf("\nTorre se movimentou para:\n");
+    movimentoTorre(5);
+    
+    
+    //Imprimindo movimento da rainha
+    printf("\nRainha se movimentou para:\n");
+    movimentoRainha(8);
+    
+
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
+
+    //Imprimindo movimento do cavalo
+    printf("\nCavalo se movimentou para:\n");
+    movimenntoCavalo(1);
 
     return 0;
 }
